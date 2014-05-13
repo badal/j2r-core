@@ -1,0 +1,10 @@
+#!mast -x bin -x metrics *
+Gemfile
+HISTORY.md
+lib/j2r-core.rb
+LICENSE
+MANIFEST
+metrics.rake
+Rakefile
+README.md
+spec/spec_helper.rb
