@@ -7,6 +7,7 @@
 # (c) Michel Demazure <michel@demazure.com>
 
 module JacintheReports
+  # methods for auditer
   module Audits
     # this year
     YEAR = Time.now.strftime('%Y').to_i
