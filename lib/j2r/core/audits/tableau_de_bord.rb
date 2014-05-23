@@ -11,8 +11,6 @@ require_relative '../../j2r.rb'
 module JacintheReports
   # diverse auditing methods
   module Audits
-    # this year
-    YEAR = Time.now.strftime('%Y').to_i
     # number of previous years to show
     BACK = 2
 

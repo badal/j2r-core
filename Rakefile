@@ -7,11 +7,11 @@ require 'yard/rake/yardoc_task'
 require 'rake/testtask'
 # require "cucumber/rake/task"
 
-require_relative 'lib/j2r/core.rb'
+require_relative 'lib/j2r/core/version.rb'
 
 spec = Gem::Specification.new do |s|
   s.name = 'j2r-core'
-  s.version = J2R::Core::VERSION
+  s.version = JacintheReports::Core::VERSION
   s.has_rdoc = true
   s.extra_rdoc_files = ['README.md', 'LICENSE']
   s.summary = 'To be replaced'
@@ -31,7 +31,7 @@ Gem::PackageTask.new(spec) do |p|
 end
 
 YARD::Rake::YardocTask.new do |t|
-  t.options += ['--title', "J2R::Core::VERSION} Documentation"]
+  t.options += ['--title', "JacintheReports::Core::VERSION} Documentation"]
   t.options += %w(--files LICENSE)
   t.options += %w(--files HISTORY.md)
   t.options += %w(--files TODO.md)
@@ -47,6 +47,11 @@ Rake::TestTask.new do |t|
   t.libs.push 'lib'
   t.test_files = FileList['test/*_test.rb']
   t.verbose = true
+end
+
+desc 'build Manifest'
+task :manifest do
+  system ' mast -x bin -x metrics -x Jacinthe -x scories -x doc -x help -x coverage -x pkg -x Claire -x sorties -x "documentation v1" -x demo * > MANIFEST'
 end
 
 # Cucumber::Rake::Task.new do |task|
