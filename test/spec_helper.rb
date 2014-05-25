@@ -6,12 +6,17 @@
 #
 # (c) Michel Demazure <michel@demazure.com>
 
+# GUIs for Jacinthe
+module JacintheReports
+  # data directory
+  DATA = ENV["J2R_DATA"]
+end
+
 require_relative '../lib/j2r/core.rb'
 
 require 'minitest/spec'
-require 'minitest/reporters'
+# require 'minitest/reporters'
 require 'minitest/autorun'
-MiniTest::Reporters.use!
 
 include J2R
 
