@@ -9,19 +9,18 @@
 # GUIs for Jacinthe
 module JacintheReports
   # data directory
-  DATA = ENV["J2R_DATA"]
+  DATA = ENV['J2R_DATA']
 end
 
+require 'j2r/jaccess'
 require_relative '../lib/j2r/core.rb'
 
-require 'minitest/spec'
-# require 'minitest/reporters'
 require 'minitest/autorun'
 
-include J2R
+include JacintheReports
 
 if __FILE__ == $PROGRAM_NAME
 
-  Dir.glob('**/*_spec.rb') { |f| require_relative f }
+  Dir.glob('**/*_test.rb') { |f| require_relative f }
 
 end

@@ -4,13 +4,23 @@
   j2r-core is the core part of J2R. It requires j2r-jaccess, and provide batch tools.
 
 ## Version
-  1.1
+  1.2
 
 ## Synopsis
   j2r-core is used as a gem for the GUI part of J2R. It also provides batch tools.
 
 ## Usage
+to install
 
+  `gem install --user-install 'j2r-core'`
+
+to run
+
+ `require 'j2r/jaccess'`
+ 
+ `require 'j2r/core'`
+
+## Batch tools
 * tableau_de_bord to build executive reports
 * tiers_searcher to build tiers_audit
 

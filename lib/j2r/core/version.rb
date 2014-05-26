@@ -7,9 +7,9 @@
 # (c) Michel Demazure <michel@demazure.com>
 
 module JacintheReports
-  # core methods for reporter and auditer
+  # core methods for reporter and auditor
   module Core
     # version of core part
-    VERSION = '1.1.0'
+    VERSION = '1.2.0'
   end
 end
