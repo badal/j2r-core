@@ -1,9 +1,8 @@
 source 'http://rubygems.org'
 
 group :exploitation do
-  gem 'mysql2', '0.3.13'
-  gem 'sequel'
   gem 'j2r-jaccess'
+  gem 'prawn'
 end
 
 group :development do

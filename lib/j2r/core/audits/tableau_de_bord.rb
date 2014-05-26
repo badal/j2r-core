@@ -6,7 +6,8 @@
 #
 # (c) Michel Demazure <michel@demazure.com>
 
-require_relative '../../j2r.rb'
+# WARNING: do not erase, necessary for external call to 'executive_report_file'
+require File.join(File.dirname(__FILE__), '../../core.rb')
 
 module JacintheReports
   # diverse auditing methods
@@ -148,7 +149,8 @@ module JacintheReports
     # @return [Path] file written
     # @param [Hash] mode connection mode
     def self.executive_report_file(mode, dir)
-      jaccess(mode)
+      require 'j2r/jaccess'
+      J2R.jaccess(mode)
       filename = "Tableau_de_bord_#{J2R::Audits.day}.pdf"
       path = File.join(dir, filename)
       report = Audits::Numbers.board_report
