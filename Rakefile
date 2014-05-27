@@ -27,6 +27,7 @@ spec = Gem::Specification.new do |s|
 end
 
 Gem::PackageTask.new(spec) do |p|
+  p.package_dir = ENV['LOCAL_GEMS']
   p.gem_spec = spec
   p.need_tar = false
  # p.need_zip = true
