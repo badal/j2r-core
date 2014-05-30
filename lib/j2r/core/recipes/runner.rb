@@ -70,7 +70,7 @@ module JacintheReports
       end
 
       # @return [Hash(Table)|Table] table(s) for the report
-      # @param [String] col name of column (not field) to be blowned
+      # @param [String] col name of column (not field) to be blowned up
       def table_for_bundle(col)
         run(@recipe.columns.keys)
         if @operations.empty?
@@ -81,14 +81,20 @@ module JacintheReports
       end
 
       # @return [Table] result cross table for the report
-      # @param [String] col name of column (not field) to be blowned
+      # @param [String] col name of column (not field) to be blowned up
       def table_split_operated(col)
-        field = @recipe.columns.invert[col]
-        tables = @recipe.internal_table.split(field)
+        tables = table_split_by(col)
         lines = tables.each_pair.map do |name, tbl|
           [name] + @operations.map { |oper| oper.act_on(tbl) }
         end
         Reports::Table.new([''] + @operations.map(&:name), lines)
+      end
+
+      # @return [Array] internal table split by this column
+      # @param [String] col name of column (not field) to be blowned up
+      def table_split_by(col)
+        field = @recipe.columns.invert[col]
+        @recipe.internal_table.split(field)
       end
 
       # @return [Table] operation result formatted for the report

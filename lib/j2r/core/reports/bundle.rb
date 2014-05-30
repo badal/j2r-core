@@ -120,19 +120,27 @@ module JacintheReports
             %w(</ul>)
       end
 
-      # FLOG: 28.4
+      # @param [Hash[String => Table] tables list of tables
+      # @param [Path] path path of output file
+      # @param [String] titre title of pdf report
       def self.prawn_generate(path, titre, tables) # rubocop:disable MethodLength
         Prawn::Document.generate(path) do
           text(titre, align: :center, size: 15)
           move_down 10
           text(tables.keys.join(', '), align: :center, size: 12)
-          tables.each_pair.with_index do |(val, tbl), indx|
-            indx == 0 ? move_down(20) : start_new_page
-            text("#{val} [#{tbl.size} lignes]", size: 12)
-            move_down 20
-            font_size 9
-            table(tbl.doc_for_pdf, CommonFormatters::PRAWN_FORMAT) unless tbl.empty?
-          end
+          generate_content(tables)
+        end
+      end
+
+      # @param [Hash[String => Table] tables list of tables
+      # @return [String] pdf for these tables
+      def self.generate_content(tables)
+        tables.each_pair.with_index do |(val, tbl), indx|
+          indx == 0 ? move_down(20) : start_new_page
+          text("#{val} [#{tbl.size} lignes]", size: 12)
+          move_down 20
+          font_size 9
+          table(tbl.doc_for_pdf, CommonFormatters::PRAWN_FORMAT) unless tbl.empty?
         end
       end
     end
