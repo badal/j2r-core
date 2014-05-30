@@ -59,13 +59,13 @@ module JacintheReports
         if clients.all.size == 1 && clients.first.id == @tiers_id.to_s
           ['<p><strong>Clients :</strong> <i>cas normal</i></p>']
         else
-          special_block(clients)
+          self.class.special_block(clients)
         end
       end
 
       # @return [Array<String>] client part : case of multiple clients
       # @param [Array<J2R::Client>] clients
-      def special_block(clients)
+      def self.special_block(clients)
         output = ['<p><strong>Clients : </strong><i>cas spécial</i>']
         output += clients.map do |client|
           "<br><i>Client \"#{client.id}\"</i> : #{client.client_sage_intitule}"
