@@ -92,7 +92,7 @@ module JacintheReports
       end
 
       # @return [String] html formatted output
-      # @param title [String] [Facultative] title of output
+      # @param title [String] [Optional] title of output
       def html_output(title = running_title)
         CommonFormatters::META + "\n<h3>#{title}</h3>\n" + @table.doc_for_html
       end
