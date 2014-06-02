@@ -5,3 +5,6 @@
 
 ## batch
 * add the batch commands for tiers_searcher and tableau_de_bord
+
+## FIX
+* protect Core::Command.fetch

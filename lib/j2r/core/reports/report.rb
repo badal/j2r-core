@@ -94,15 +94,13 @@ module JacintheReports
       # @return [String] html formatted output
       # @param title [String] [Facultative] title of output
       def html_output(title = running_title)
-        CommonFormatters::META + "\n" +
-            "<h3>#{title}</h3>\n" + @table.doc_for_html
+        CommonFormatters::META + "\n<h3>#{title}</h3>\n" + @table.doc_for_html
       end
 
       # @return [String] html formatted output
       # @param lim [Integer] number of lines
       def html_sample(lim = 8)
-        CommonFormatters::META + "\n" +
-            "<h3>#{running_title}</h3>\n" + @table.sample_for_html(lim)
+        CommonFormatters::META + "\n<h3>#{running_title}</h3>\n" + @table.sample_for_html(lim)
       end
 
       # @param [Path] path path of file to be produced
