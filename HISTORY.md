@@ -1,3 +1,6 @@
+## [v1.2.2]
+* changed wrong names to 'dashboard'
+
 ## [v1.2.1]
 * added executive_report executable
 * changed 'auditer' to 'auditor'

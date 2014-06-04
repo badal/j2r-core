@@ -9,25 +9,25 @@
 require 'j2r/jaccess'
 
 require_relative('../core.rb')
-require_relative('audits/tableau_de_bord.rb')
+require_relative('audits/dashboard.rb')
 
 module JacintheReports
   # build executive report
-  module ExecutiveReport
+  module Dashboard
     # build the pdf executive report
 
     # @param [Path] dir directory to write the file in
     # @return [Path] file written
     # @param [Hash] mode connection mode
     def self.build(mode, dir)
-      Audits.executive_report_file(mode, dir)
+      Audits.dashboard_file(mode, dir)
     end
   end
 end
 
 if __FILE__ == $PROGRAM_NAME
 
-  path = J2R::ExecutiveReport.build('exploitation', 'C:\Temp')
+  path = J2R::Dashboard.build('exploitation', 'C:\Temp')
   J2R.open_file_command(path)
 
 end

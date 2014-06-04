@@ -1,15 +1,15 @@
-#!mast -x bin -x metrics -x Jacinthe -x scories -x doc -x help -x coverage -x pkg -x Claire -x sorties -x documentation v1 -x demo doc Gemfile Gemfile.lock HISTORY.md lib LICENSE MANIFEST metrics metrics.rake pkg Rakefile README.md test TODO.md
+#!mast -x bin -x metrics -x Jacinthe -x scories -x doc -x help -x coverage -x pkg -x Claire -x sorties -x documentation v1 -x demo coverage doc Gemfile Gemfile.lock HISTORY.md j2r-core.reek lib LICENSE MANIFEST metrics metrics.rake Rakefile README.md test TODO.md
 Gemfile
-Gemfile.lock
 HISTORY.md
 lib/j2r/core/audits/js/app.js
 lib/j2r/core/audits/js/jquery.js
 lib/j2r/core/audits/snippets.rb
 lib/j2r/core/audits/tableau_de_bord.rb
 lib/j2r/core/audits/template.rb
-lib/j2r/core/audits/tiers_auditer.rb
+lib/j2r/core/audits/tiers_auditor.rb
 lib/j2r/core/audits/tiers_searcher.rb
 lib/j2r/core/audits.rb
+lib/j2r/core/executive_report.rb
 lib/j2r/core/recipes/batch_reporter.rb
 lib/j2r/core/recipes/macro.rb
 lib/j2r/core/recipes/node.rb
@@ -32,7 +32,6 @@ lib/j2r/core/version.rb
 lib/j2r/core.rb
 LICENSE
 MANIFEST
-metrics.rake
 Rakefile
 README.md
 test/operation_test.rb

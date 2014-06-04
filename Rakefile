@@ -55,7 +55,7 @@ end
 
 desc 'build Manifest'
 task :manifest do
-  system ' mast -x bin -x metrics -x Jacinthe -x scories -x doc -x help -x coverage -x pkg -x Claire -x sorties -x "documentation v1" -x demo * > MANIFEST'
+  system ' mast -x bin -x metrics -x doc -x help -x coverage -x "documentation v1" * > MANIFEST'
 end
 
 # Cucumber::Rake::Task.new do |task|

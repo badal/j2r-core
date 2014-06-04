@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-# File: tableau_de_bord.rb
+# File: dashboard.rb
 # Created: 15/02/12
 #
 # (c) Michel Demazure <michel@demazure.com>
@@ -101,7 +101,7 @@ module JacintheReports
       end
 
       # @return [Report] board report
-      def self.board_report
+      def self.dashboard
         Reports::Report.new(Reports::Table.new(titles, content_table))
       end
 
@@ -148,11 +148,11 @@ module JacintheReports
     # @param [Path] dir directory to write the file in
     # @return [Path] file written
     # @param [Hash] mode connection mode
-    def self.executive_report_file(mode, dir)
+    def self.dashboard_file(mode, dir)
       J2R.jaccess(mode)
       filename = "Tableau_de_bord_#{J2R::Audits.day}.pdf"
       path = File.join(dir, filename)
-      report = Audits::Numbers.board_report
+      report = Audits::Numbers.dashboard
       report.title = "Tableau de bord [#{J2R::Audits.day}]"
       report.to_pdf_file(path)
     end
