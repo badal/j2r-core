@@ -16,5 +16,5 @@ end
 
 require_relative 'audits/snippets.rb'
 require_relative 'audits/template.rb'
-require_relative 'audits/tiers_auditer.rb'
+require_relative 'audits/tiers_auditor.rb'
 require_relative 'audits/tiers_searcher.rb'

@@ -1,5 +1,6 @@
 ## [v1.2.1]
 * added executive_report executable
+* changed 'auditer' to 'auditor'
 
 ## [v1.2.0]
 * gemified

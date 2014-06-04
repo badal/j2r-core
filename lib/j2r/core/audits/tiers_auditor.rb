@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-# File: tiers_auditer.rb
+# File: tiers_auditor.rb
 # Created: 08/04/12, separated from TiersSearcher: 10/4/14
 #
 # (c) Michel Demazure <michel@demazure.com>
@@ -9,10 +9,10 @@
 module JacintheReports
   module Audits
     # methods to build audits for tiers
-    class TiersAuditer
+    class TiersAuditor
       # @param [Integer] tiers_id id of the tiers
       # @param [Integer] year year for reduced posting
-      # @return [TiersAuditer] new tiers auditer
+      # @return [TiersAuditor] new tiers auditer
       def initialize(tiers_id, year = YEAR)
         @tiers_id = tiers_id
         @the_tiers = J2R::Tiers[tiers_id]

@@ -18,6 +18,7 @@ spec = Gem::Specification.new do |s|
   s.description = 'To be replaced'
   s.author = 'Michel Demazure'
   s.email = 'michel@demazure.com'
+  s.homepage = 'http://github.com/badal/j2r-core'
   # s.executables = ['your_executable_here']
   s.add_dependency('j2r-jaccess')
   s.add_dependency('prawn')

@@ -8,7 +8,7 @@
 
 require_relative 'snippets.rb'
 require_relative 'template.rb'
-require_relative 'tiers_auditer.rb'
+require_relative 'tiers_auditor.rb'
 
 module JacintheReports
   module Audits
@@ -61,14 +61,14 @@ module JacintheReports
       # open the audit report
       # @param [Integer] tiers_id id of tiers
       def show_audit(tiers_id)
-        path = Audits::TiersAuditer.new(tiers_id).audit_path
+        path = Audits::TiersAuditor.new(tiers_id).audit_path
         J2R.open_file_command(path)
       end
 
       # @param [Integer] tiers_id id of tiers
       # @return [String] html report extract to be shown
       def extract(tiers_id)
-        Audits::TiersAuditer.new(tiers_id).extract
+        Audits::TiersAuditor.new(tiers_id).extract
       end
     end
   end
