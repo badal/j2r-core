@@ -1,3 +1,6 @@
+## [v1.2.1]
+* added executive_report executable
+
 ## [v1.2.0]
 * gemified
 * uses `j2r-jaccess` gem

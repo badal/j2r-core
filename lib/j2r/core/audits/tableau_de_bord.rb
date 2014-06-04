@@ -144,12 +144,11 @@ module JacintheReports
       end
     end
 
-    # build the executive report and print it as pdf
+    # build the pdf executive report
     # @param [Path] dir directory to write the file in
     # @return [Path] file written
     # @param [Hash] mode connection mode
     def self.executive_report_file(mode, dir)
-      require 'j2r/jaccess'
       J2R.jaccess(mode)
       filename = "Tableau_de_bord_#{J2R::Audits.day}.pdf"
       path = File.join(dir, filename)
@@ -158,17 +157,4 @@ module JacintheReports
       report.to_pdf_file(path)
     end
   end
-end
-
-if __FILE__ == $PROGRAM_NAME
-
-  J2R.for_user do
-    include J2R::Audits
-    filename = "Tableau_de_bord_#{J2R::Audits.day}"
-    report = Numbers.board_report
-    report.title = "Tableau de bord [#{J2R::Audits.day}]"
-    p report.to_html_user_file(filename)
-    p report.to_pdf_user_file(filename)
-  end
-
 end
