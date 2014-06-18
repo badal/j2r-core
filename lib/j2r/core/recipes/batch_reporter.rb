@@ -8,8 +8,6 @@
 
 require 'optparse'
 
-require_relative '../../../lib/j2r'
-
 module JacintheReports
   module Recipes
     # batch reporter for Jacinthe
@@ -67,7 +65,7 @@ FIN
             error(HELP)
           end
           opts.on_tail('-v', '--version', 'Version du programme.') do
-            error(J2R::NAME)
+            error(J2R::Core::VERSION)
           end
         end
 
@@ -180,10 +178,4 @@ FIN
       end
     end
   end
-end
-
-if __FILE__ == $PROGRAM_NAME
-
-  J2R::Recipes::BatchReporter.run(ARGV)
-
 end

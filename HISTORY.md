@@ -1,3 +1,6 @@
+## [v1.2.3]
+* added bin directory and batch_reporter executable
+
 ## [v1.2.2]
 * changed wrong names to 'dashboard'
 

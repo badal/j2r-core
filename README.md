@@ -20,10 +20,12 @@ to run
  
  `require 'j2r/core'`
 
-## Batch tools
-* tableau\_\de_bord.rb to build executive reports
-* tiers_searcher.rb to build tiers_audit
-  batch\_reporter.rb to build reports 
+## Extra batch tools
+* dashboard.rb to build executive reports
+* tiers_searcher.rb to build Tiers audits 
+
+## Executables
+* `bin/batch\_reporter` to build reports 
 
 ## More documentation
    See the Yardoc/RDoc documentation.
