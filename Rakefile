@@ -1,37 +1,16 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-require 'rubygems/package_task'
 require 'yard'
 require 'yard/rake/yardoc_task'
 require 'rake/testtask'
-# require "cucumber/rake/task"
 
 require_relative 'lib/j2r/core/version.rb'
 
-spec = Gem::Specification.new do |s|
-  s.name = 'j2r-core'
-  s.version = JacintheReports::Core::VERSION
-  s.has_rdoc = true
-  s.extra_rdoc_files = ['README.md', 'LICENSE']
-  s.summary = 'To be replaced'
-  s.description = 'To be replaced'
-  s.author = 'Michel Demazure'
-  s.email = 'michel@demazure.com'
-  s.homepage = 'http://github.com/badal/j2r-core'
-  s.executables = %w(batch_reporter)
-  s.add_dependency('j2r-jaccess')
-  s.add_dependency('prawn')
-  s.files = %w(LICENSE README.md HISTORY.md MANIFEST Rakefile) + Dir.glob('{bin,lib,test}/**/*')
-  s.require_path = 'lib'
-  s.bindir = 'bin'
-end
-
-Gem::PackageTask.new(spec) do |p|
-  p.package_dir = ENV['LOCAL_GEMS']
-  p.gem_spec = spec
-  p.need_tar = false
- # p.need_zip = true
+desc 'build gem file'
+task :build_gem do
+  system 'gem build j2r-core.gemspec'
+  FileUtils.cp(Dir.glob('*.gem'), ENV['LOCAL_GEMS'])
 end
 
 YARD::Rake::YardocTask.new do |t|
@@ -57,9 +36,5 @@ desc 'build Manifest'
 task :manifest do
   system ' mast -x bin -x metrics -x doc -x help -x coverage -x "documentation v1" * > MANIFEST'
 end
-
-# Cucumber::Rake::Task.new do |task|
-#  task.cucumber_opts = ["features"]
-# end
 
 import('metrics.rake')
