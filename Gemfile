@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 group :exploitation do
-  gem 'j2r-jaccess'
+  gem 'j2r-jaccess', github: 'badal/j2r-jaccess', branch: 'master'
   gem 'prawn'
 end
 
