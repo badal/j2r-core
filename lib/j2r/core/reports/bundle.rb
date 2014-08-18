@@ -120,7 +120,7 @@ module JacintheReports
             %w(</ul>)
       end
 
-      # @param [Hash[String => Table] tables list of tables
+      # @param [Hash] tables list of tables : String => Table
       # @param [Path] path path of output file
       # @param [String] titre title of pdf report
       def self.prawn_generate(path, titre, tables) # rubocop:disable MethodLength
@@ -132,7 +132,7 @@ module JacintheReports
         end
       end
 
-      # @param [Hash[String => Table] tables list of tables
+      # @param [Hash] tables list of tables : String => Table
       # @return [String] pdf for these tables
       def self.generate_content(tables)
         tables.each_pair.with_index do |(val, tbl), indx|
