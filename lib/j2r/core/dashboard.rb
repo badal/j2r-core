@@ -6,11 +6,6 @@
 #
 # (c) Michel Demazure <michel@demazure.com>
 
-require 'j2r/jaccess'
-
-require_relative('../core.rb')
-require_relative('audits/dashboard.rb')
-
 module JacintheReports
   # build executive report
   module Dashboard
