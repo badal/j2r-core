@@ -29,7 +29,7 @@ module JacintheReports
       # initialize source and processing list of links
       def set_starting_state
         @source = Jaccess[@head.table]
-        @list.each { |node| node.reset }
+        @list.each(&:reset)
       end
 
       # join step of processind
