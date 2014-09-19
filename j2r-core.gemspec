@@ -15,11 +15,9 @@ Gem::Specification.new do |s|
   s.author = 'Michel Demazure'
   s.email = 'michel@demazure.com'
   s.homepage = 'http://github.com/badal/j2r-core'
-  s.executables = %w(batch_reporter)
   s.add_dependency('j2r-jaccess')
   s.add_dependency('prawn')
-  s.files = %w(LICENSE README.md HISTORY.md MANIFEST Rakefile) + Dir.glob('{bin,lib,test}/**/*')
+  s.files = %w(LICENSE README.md HISTORY.md MANIFEST Rakefile) + Dir.glob('{lib,test}/**/*')
   s.require_path = 'lib'
-  s.bindir = 'bin'
 end
 

@@ -4,7 +4,7 @@
   j2r-core is the core part of J2R. It requires j2r-jaccess, and provide batch tools.
 
 ## Version
-  1.2
+  1.3
 
 ## Synopsis
   j2r-core is used as a gem for the GUI part of J2R. It also provides batch tools.
@@ -17,15 +17,15 @@ to install
 to run
 
  `require 'j2r/jaccess'`
- 
+
  `require 'j2r/core'`
 
 ## Extra batch tools
 * dashboard.rb to build executive reports
-* tiers_searcher.rb to build Tiers audits 
+* tiers_searcher.rb to build Tiers audits
 
 ## Executables
-* `bin/batch\_reporter` to build reports 
+* `bin/batch\_reporter` to build reports
 
 ## More documentation
    See the Yardoc/RDoc documentation.
