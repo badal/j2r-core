@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 group :exploitation do
   # gem 'j2r-jaccess', github: 'badal/j2r-jaccess', branch: 'master'
   gem 'j2r-jaccess', git: 'C:/Users/Michel/Documents/Share/dev_ruby/j2r-jaccess', branch: 'master'
-  gem 'prawn', '~>0.14'
+  gem 'prawn', '=0.14'
 end
 
 group :development do
