@@ -6,9 +6,6 @@
 #
 # (c) Michel Demazure <michel@demazure.com>
 
-# WARNING: do not erase, necessary for external call to 'executive_report_file'
-require File.join(File.dirname(__FILE__), '../../core.rb')
-
 module JacintheReports
   # diverse auditing methods
   module Audits
