@@ -1,3 +1,6 @@
+## [v 1.3.1]
+* no more executables
+
 ## [v1.2.3]
 * added bin directory and batch_reporter executable
 
