@@ -41,7 +41,7 @@ module JacintheReports
                            abonnement_revue: "#{journal}",
                            abonnement_type: "#{type}",
                            abonnement_ignorer: 0)
-        .filter(Sequel.~(client_sage_paiement_chez: 77)).map(:tiers_id).uniq
+          .filter(Sequel.~(client_sage_paiement_chez: 77)).map(:tiers_id).uniq
       end
 
       # @return [Numbers] array of yearly arrays of members
@@ -93,8 +93,8 @@ module JacintheReports
       # @return [Array] all lines of report
       def self.content_table
         [['', ''] + Numbers.subtitles] +
-            [['Adhésions', ''] + Numbers.members.bilan] +
-            subscription_table
+          [['Adhésions', ''] + Numbers.members.bilan] +
+          subscription_table
       end
 
       # @return [Report] board report

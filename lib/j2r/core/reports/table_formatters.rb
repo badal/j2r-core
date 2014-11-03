@@ -28,7 +28,7 @@ module JacintheReports
       def doc_for_txt
         horiz = HORIZ * horiz_length
         [horiz, line_format(@columns), horiz] +
-            @lines.map { |line| line_format(line) } + [horiz]
+          @lines.map { |line| line_format(line) } + [horiz]
       end
 
       # @return [String] csv output
@@ -39,9 +39,9 @@ module JacintheReports
       # @return [String] html output
       def doc_for_html
         TABLE_FORMAT + "\n" +
-            TableFormatters.html_line(@columns, 'th') +
-            @lines.map { |line| TableFormatters.html_line(line) }.join +
-            "\n</table>"
+          TableFormatters.html_line(@columns, 'th') +
+          @lines.map { |line| TableFormatters.html_line(line) }.join +
+          "\n</table>"
       end
 
       private
@@ -78,8 +78,8 @@ module JacintheReports
 
       def self.html_line(line, tag = 'td')
         "<tr>\n" +
-            line.map { |item| "<#{tag}>#{item}</#{tag}>" }.join("\n") +
-            "\n</tr>\n"
+          line.map { |item| "<#{tag}>#{item}</#{tag}>" }.join("\n") +
+          "\n</tr>\n"
       end
 
       # @return [String] converted line

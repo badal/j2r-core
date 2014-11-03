@@ -60,8 +60,8 @@ module JacintheReports
   end
 
   # @return [Logger] the logger
-  def self.logger
-    @logger
+  class << self
+    attr_reader :logger
   end
 
   # logs the error in the user log

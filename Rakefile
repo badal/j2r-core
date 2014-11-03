@@ -14,7 +14,7 @@ task :build_gem do
 end
 
 YARD::Rake::YardocTask.new do |t|
-  t.options += ['--title', "JacintheReports::Core::VERSION} Documentation"]
+  t.options += ['--title', "#{JacintheReports::Core::VERSION} Documentation"]
   t.options += %w(--files LICENSE)
   t.options += %w(--files HISTORY.md)
   t.options += %w(--files TODO.md)

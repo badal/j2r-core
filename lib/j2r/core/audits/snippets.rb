@@ -31,7 +31,7 @@ HEAD_END
         jquery = File.join(dir, 'js/jquery.js')
         app = File.join(dir, 'js/app.js')
         HEAD.sub('$TITLE', title).sub('$JQUERY', "'file://#{jquery}'")
-        .sub('$APP', "'file://#{app}'")
+          .sub('$APP', "'file://#{app}'")
       end
 
       # @param [String, Array<String>] short_text always visible

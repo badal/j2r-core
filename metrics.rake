@@ -20,7 +20,7 @@ namespace :metrics do
     system 'reek lib/**/*.rb > metrics\reek.txt'
     puts `wc metrics/reek.txt`
   end
-  
+
   desc 'Run churn'
   task :churn do
     system 'churn > metrics\churn.txt'
@@ -36,10 +36,10 @@ namespace :metrics do
   end
 
   desc 'Flog, flay, reek, saikuro'
-  task :all_checks => [:flog, :flay, :reek, :saikuro]
+  task all_checks: [:flog, :flay, :reek, :saikuro]
 
   desc 'Flog with scores, flay, reek, saikuro'
-  task :all_checks_with_scores => [:flog_scores, :flay, :reek, :saikuro]
+  task all_checks_with_scores: [:flog_scores, :flay, :reek, :saikuro]
 
   desc 'Run saikuro'
   task :saikuro do
@@ -49,7 +49,7 @@ namespace :metrics do
   end
 
   desc 'Run flog and insert scores'
-  task :flog_scores => [:flog, :insert_scores]
+  task flog_scores: [:flog, :insert_scores]
 
   task :insert_scores do
     puts 'scores'

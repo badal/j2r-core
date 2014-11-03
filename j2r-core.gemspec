@@ -20,4 +20,3 @@ Gem::Specification.new do |s|
   s.files = %w(LICENSE README.md HISTORY.md MANIFEST Rakefile) + Dir.glob('{lib,test}/**/*')
   s.require_path = 'lib'
 end
-

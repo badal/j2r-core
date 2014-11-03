@@ -114,10 +114,10 @@ module JacintheReports
       # @return [Array<String>] sizes table of bundle
       def bundle_table
         %w(<ul>) +
-            @tables.each_pair.map do |val, table|
-              "<li><a href = \"\##{val}\"> #{val} [#{table.size_to_print}]</li>\n"
-            end +
-            %w(</ul>)
+          @tables.each_pair.map do |val, table|
+            "<li><a href = \"\##{val}\"> #{val} [#{table.size_to_print}]</li>\n"
+          end +
+          %w(</ul>)
       end
 
       # @param [Hash] tables list of tables : String => Table

@@ -47,9 +47,9 @@ module JacintheReports
           "<p><strong>Type : </strong><i>#{@the_tiers.type_tiers_nom}</i></p>",
           '<p>' + @the_tiers.afnor.join('<br>') + '</p>',
           '<p><strong>Particularités : </strong><i>' +
-              @the_tiers.particularites + '</i></p>',
+            @the_tiers.particularites + '</i></p>',
           '<p><strong>Rapports : </strong><br><i>' +
-              @the_tiers.rapports.join('<br>') + '</i></p>'
+            @the_tiers.rapports.join('<br>') + '</i></p>'
         ]
       end
 
