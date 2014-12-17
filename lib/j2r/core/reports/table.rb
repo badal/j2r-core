@@ -98,6 +98,9 @@ module JacintheReports
 
       # @return [Array<Integer>] array of all tiers_id
       def all_tiers
+
+        puts "called"
+        p @lines.first
         indx = col_index(:tiers_id)
         return [] unless indx
         @lines.map { |line| line[indx] }.uniq
