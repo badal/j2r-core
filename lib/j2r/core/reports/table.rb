@@ -100,7 +100,7 @@ module JacintheReports
       def all_tiers
         indx = col_index(:tiers_id)
         return [] unless indx
-        @lines.map { |line| line[indx] }.uniq.sort_by(&:to_i)
+        @lines.map { |line| line[indx] }.uniq
       end
 
       # @param lim [Integer] number of lines to keep
