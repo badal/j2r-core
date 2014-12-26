@@ -36,7 +36,6 @@ to run
    [![Code Climate](https://codeclimate.com/github/badal/j2r-core.png)](https://codeclimate.com/github/badal/jacman-qt)
 
    * Source code on repository [GitHub](https://github.com/badal/j2r-core)
-   * [Issue Tracker](https://bitbucket.org/mdemazure/j2r/issues?status=new&status=openissues/new)
 
 ## Copyright
    (c) 2014, Michel Demazure
