@@ -10,6 +10,6 @@ module JacintheReports
   # core methods for reporter and auditor
   module Core
     # version of core part
-    VERSION = '1.3.1.a'
+    VERSION = '1.3.2'
   end
 end
