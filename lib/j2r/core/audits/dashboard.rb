@@ -73,10 +73,10 @@ module JacintheReports
 
       # @return [Array<Array>] subscription lines of report
       def self.subscription_table
-        (1..20).to_a.map do |indx|
+        (1..20).to_a.flat_map do |indx|
           journal = J2R::Revue[indx]
           method_name(indx, journal) if journal
-        end.flatten(1).compact
+        end.compact
       end
 
       # @param [Integer] indx id of record

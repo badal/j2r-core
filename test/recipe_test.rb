@@ -12,7 +12,6 @@ include Jaccess
 include Recipes
 
 describe 'Recipe' do
-
   before { J2R.jaccess('test') }
   let(:recipe) do
     table = :abonnement

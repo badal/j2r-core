@@ -70,7 +70,7 @@ module JacintheReports
       # @param value_in [Object] absent value in col.0
       # @param lines [[Array, Array]] lines containing value_out, value_in
       # @return [Array] lines with value_in and not value_out
-      def self.compare_first(lines, value_out, value_in) # rubocop:disable MethodLength
+      def self.compare_first(lines, value_out, value_in)
         lines_out = []
         lines_in = []
         lines.each do |line|
@@ -79,8 +79,6 @@ module JacintheReports
             lines_out << [value_in] + line.drop(1)
           when value_in
             lines_in << line
-          else
-            nil
           end
         end
         lines_in - lines_out

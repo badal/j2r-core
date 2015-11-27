@@ -19,8 +19,4 @@ require 'minitest/autorun'
 
 include JacintheReports
 
-if __FILE__ == $PROGRAM_NAME
-
-  Dir.glob('**/*_test.rb') { |f| require_relative f }
-
-end
+Dir.glob('**/*_test.rb') { |f| require_relative f } if __FILE__ == $PROGRAM_NAME

@@ -58,8 +58,7 @@ module JacintheReports
         query = make_tree(fields).build_sequel
         @filters.each do |field, value, bool|
           value = nil if value == SQUARE
-          query = bool ? query.filter(field => value) :
-              query.filter(Sequel.~({ field => value }))
+          query = bool ? query.filter(field => value) : query.filter(Sequel.~({ field => value }))
         end
         @sorts.each_pair.map do |field, bool|
           query = query.order_append(bool ? field : Sequel.desc(field))

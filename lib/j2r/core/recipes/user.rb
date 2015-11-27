@@ -14,9 +14,11 @@ module JacintheReports
     # null
     def info(*)
     end
+
     # null
     def debug(*)
     end
+
     # null
     def error(*)
     end

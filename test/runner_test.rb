@@ -12,7 +12,6 @@ include Jaccess
 include Recipes
 
 describe 'Runner' do
-
   before { J2R.jaccess('test') }
   let(:runner) do
     table = :abonnement
@@ -52,5 +51,4 @@ describe 'Runner' do
     table.size.must_equal(1034)
     table.doc_for_txt[120].must_equal('|6162    |')
   end
-
 end

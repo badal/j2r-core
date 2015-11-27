@@ -1,5 +1,4 @@
 namespace :metrics do
-
   SRC = File.dirname(__FILE__)
   METRICS = File.join(SRC, 'metrics')
 
@@ -65,7 +64,7 @@ namespace :metrics do
     end
 
     def get_all_scores(limit)
-      hash = Hash.new
+      hash = {}
       IO.readlines(FLOG_FILE).each do |line|
         name, number, score = *get_parameters(line)
         hash[name] ||= []
@@ -105,5 +104,4 @@ namespace :metrics do
 
     insert_all_scores(LIMIT)
   end
-
 end

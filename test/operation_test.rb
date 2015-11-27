@@ -12,7 +12,6 @@ include Jaccess
 include Recipes
 
 describe 'Operations' do
-
   let(:list) { (1..5).to_a }
 
   it 'sum' do
@@ -30,5 +29,4 @@ describe 'Operations' do
   it 'standard_deviation' do
     Operation.standard_deviation(list).must_equal Math.sqrt(2)
   end
-
 end

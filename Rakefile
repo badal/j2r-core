@@ -10,7 +10,7 @@ require_relative 'lib/j2r/core/version.rb'
 desc 'build gem file'
 task :build_gem do
   system 'gem build j2r-core.gemspec'
-  FileUtils.cp(Dir.glob('*.gem'), ENV['LOCAL_GEMS'])
+  FileUtils.mv(Dir.glob('*.gem'), ENV['LOCAL_GEMS'])
 end
 
 YARD::Rake::YardocTask.new do |t|

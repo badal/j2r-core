@@ -123,7 +123,7 @@ module JacintheReports
       # @param [Hash] tables list of tables : String => Table
       # @param [Path] path path of output file
       # @param [String] titre title of pdf report
-      def self.prawn_generate(path, titre, tables) # rubocop:disable MethodLength
+      def self.prawn_generate(path, titre, tables)
         Prawn::Document.generate(path) do
           text(titre, align: :center, size: 15)
           move_down 10

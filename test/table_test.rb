@@ -11,7 +11,6 @@ require_relative 'spec_helper.rb'
 include Reports
 
 describe 'Table' do
-
   let(:letters) { ('A'..'H').to_a }
   let(:table) do
     cols = letters + ['p']
@@ -55,7 +54,6 @@ describe 'Table' do
   end
 
   describe 'compare and split' do
-
     let(:tab) do
       cols = %w(ref blow)
       lines = [%w(U A), %w(V A), %w(U B)]
@@ -76,6 +74,5 @@ describe 'Table' do
       blow['A'].size.must_equal(2)
       blow['B'].size.must_equal(1)
     end
-
   end
 end

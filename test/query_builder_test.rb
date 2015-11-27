@@ -12,7 +12,6 @@ include Jaccess
 include Recipes
 
 describe 'QueryBuilder' do
-
   before { J2R.jaccess('test') }
   let(:builder) do
     table = :abonnement
@@ -33,5 +32,4 @@ describe 'QueryBuilder' do
       builder.build_query_with(fields).must_equal query
     end
   end
-
 end

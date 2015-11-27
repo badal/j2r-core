@@ -94,8 +94,6 @@ FIN
           relative ? nil : absolute
         elsif relative
           File.expand_path(relative, @dir)
-        else
-          nil
         end
       end
 
@@ -115,8 +113,6 @@ FIN
           ENV['USERPROFILE']
         when J2R.darwin?
           ENV['HOME']
-        else
-          nil
         end
       end
 
@@ -160,7 +156,7 @@ FIN
       # @param recipe [Recipe] recipe to process
       # @param output_path [Path] output file
       # @param format [Symbol] format
-      def self.process(recipe, output_path, format) # rubocop:disable MethodLength
+      def self.process(recipe, output_path, format)
         J2R.for_user do
           report = Reports::Report.new(recipe.table_for_report)
           # noinspection RubyCaseWithoutElseBlockInspection
