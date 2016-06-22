@@ -1,3 +1,6 @@
+## [v 1.3.3]
+* adding infos complementaires to auditor report
+
 ## [v 1.3.1]
 * no more executables
 

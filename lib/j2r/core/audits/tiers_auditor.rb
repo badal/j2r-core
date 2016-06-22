@@ -44,12 +44,14 @@ module JacintheReports
       # @return [Array<String>] first part of the audit
       def first_block
         [
-          "<p><strong>Type : </strong><i>#{@the_tiers.type_tiers_nom}</i></p>",
-          '<p>' + @the_tiers.afnor.join('<br>') + '</p>',
-          '<p><strong>Particularités : </strong><i>' +
-            @the_tiers.particularites + '</i></p>',
-          '<p><strong>Rapports : </strong><br><i>' +
-            @the_tiers.rapports.join('<br>') + '</i></p>'
+            "<p><strong>Type : </strong><i>#{@the_tiers.type_tiers_nom}</i></p>",
+            '<p>' + @the_tiers.afnor.join('<br>') + '</p>',
+            '<p><strong>Résumé : </strong><i>' +
+                @the_tiers.infos_complementaires + '</i></p>',
+            '<p><strong>Particularités : </strong><i>' +
+                @the_tiers.particularites + '</i></p>',
+            '<p><strong>Rapports : </strong><br><i>' +
+                @the_tiers.rapports.join('<br>') + '</i></p>'
         ]
       end
 
